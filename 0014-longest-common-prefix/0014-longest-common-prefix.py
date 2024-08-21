@@ -3,7 +3,7 @@ class Solution:
         if len(strs) == 1:
             return strs[0]
 
-        pre = False
+        prefix = False
         s = strs[0]
         n = len(strs[1:])-1
         while s:
@@ -12,8 +12,8 @@ class Solution:
                 if not word.startswith(s):
                     break
                 if i == n:
-                    pre = True
-            if pre:
+                    prefix = True
+            if prefix:
                 return s
             s = s[:-1]
         
